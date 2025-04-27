@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CampusConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="home.html" class="logo">CampusConnect</a>
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for people, posts, skills..." class="search-input">
+                    </div>
+                </div>
+            </div>
+            <nav class="nav-center">
+                <ul>
+                    <li>
+                        <a href="home.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="connections.html">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Connections</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="groups.html">
+                            <i class="fas fa-users"></i>
+                            <span>Groups</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="messages.html">
+                            <i class="fas fa-comment"></i>
+                            <span>Messages</span>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="nav-notifications">
+                    <button class="icon-btn notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </button>
+                </div>
+                <div class="nav-profile">
+                    <button class="profile-btn">
+                        <img src="images/profile.jpg" alt="Your Profile" class="profile-img">
+                        <span class="profile-name">Rohit</span>
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown profile-dropdown">
+                        <ul>
+                            <li><a href="profile.html"><i class="fas fa-user"></i> View Profile</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                            <li class="divider"></li>
+                            <li><a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-main">
+        <div class="profile-header">
+            <div class="container">
+                <div class="cover-photo">
+                    <img src="images/cover-photo.jpg" alt="Cover Photo">
+                    <button class="edit-cover-btn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-header-content">
+                    <div class="profile-photo">
+                        <img src="images/profile.jpg" alt="Rohit Kumar">
+                        <button class="edit-profile-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h1>Rohit Kumar</h1>
+                        <p class="headline">Computer Science Student | Web Developer | AI Enthusiast</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                        <p class="education"><i class="fas fa-graduation-cap"></i> Computer Science Engineering, 3rd Year</p>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Connect
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-comment"></i> Message
+                        </button>
+                        <button class="btn btn-outline btn-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-nav">
+            <div class="container">
+                <ul class="profile-nav-items">
+                    <li class="active"><a href="#posts">Posts</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#connections">Connections <span>127</span></a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="sidebar-card about-card">
+                        <h3 class="sidebar-title">About</h3>
+                        <p class="about-text">
+                            Passionate Computer Science student with a keen interest in web development and artificial intelligence. Looking to collaborate on innovative projects and expand my professional network.
+                        </p>
+                        <button class="edit-about-btn">
+                            <i class="fas fa-pencil-alt"></i> Edit
+                        </button>
+                    </div>
+
+                    <div class="sidebar-card skills-card">
+                        <div class="card-header">
+                            <h3 class="sidebar-title">Skills</h3>
+                            <button class="edit-skills-btn">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-badge">HTML/CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">React.js</span>
+                            <span class="skill-badge">Node.js</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">Machine Learning</span>
+                            <span class="skill-badge">UI/UX Design</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card achievement-card">
+                        <div class="card-header">
+                            <h3 class="sidebar-title">Achievements</h3>
+                            <button class="edit-achievements-btn">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                        </div>
+                        <ul class="achievements-list">
+                            <li class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h4>1st Place in College Hackathon</h4>
+                                    <p>Developed an AI-powered educational app</p>
+                                    <span class="achievement-date">September 2023</span>
+                                </div>
+                            </li>
+                            <li class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h4>Full Stack Web Development Certification</h4>
+                                    <p>Udemy - Completed with distinction</p>
+                                    <span class="achievement-date">July 2023</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-main-content">
+                    <div class="post-composer">
+                        <div class="composer-top">
+                            <img src="images/profile.jpg" alt="Your Profile" class="profile-img-small">
+                            <button id="open-post-modal" class="post-input-trigger">Share your thoughts or updates...</button>
+                        </div>
+                        <div class="composer-actions">
+                            <button class="composer-btn">
+                                <i class="fas fa-image"></i>
+                                <span>Photo</span>
+                            </button>
+                            <button class="composer-btn">
+                                <i class="fas fa-video"></i>
+                                <span>Video</span>
+                            </button>
+                            <button class="composer-btn">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Document</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="profile-posts">
+                        <div class="post">
+                            <div class="post-header">
+                                <img src="images/profile.jpg" alt="Rohit Kumar" class="post-avatar">
+                                <div class="post-author-info">
+                                    <div class="post-author-name">Rohit Kumar</div>
+                                    <div class="post-meta">3 days ago</div>
+                                </div>
+                                <button class="post-menu-btn">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                            <div class="post-content">
+                                <p>Just finished my portfolio website using React and Three.js. Check it out and let me know what you think!</p>
+                                <a href="#" class="post-link">
+                                    <div class="link-preview">
+                                        <div class="link-image">
+                                            <img src="images/portfolio.jpg" alt="Portfolio Website">
+                                        </div>
+                                        <div class="link-details">
+                                            <h4>Rohit Kumar - Web Developer</h4>
+                                            <p>rohitkumar.com</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="post-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Three.js</span>
+                                    <span class="tag">Portfolio</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>32 Likes</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span>8 Comments</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span>3 Shares</span>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="post-action-btn">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="post-action-btn">
+                                    <i class="far fa-share-square"></i>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-header">
+                                <img src="images/profile.jpg" alt="Rohit Kumar" class="post-avatar">
+                                <div class="post-author-info">
+                                    <div class="post-author-name">Rohit Kumar</div>
+                                    <div class="post-meta">1 week ago</div>
+                                </div>
+                                <button class="post-menu-btn">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                            <div class="post-content">
+                                <p>Excited to share that I've joined the Coding Club as a Core Team Member! Looking forward to organizing workshops and hackathons this semester.</p>
+                                <div class="post-media">
+                                    <img src="images/coding-club.jpg" alt="Coding Club" class="post-image">
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>76 Likes</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span>18 Comments</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span>7 Shares</span>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="post-action-btn">
+                                    <i class="far fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="post-action-btn">
+                                    <i class="far fa-share-square"></i>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CampusConnect</h3>
+                    <p>Empowering students to connect, collaborate, and grow professionally.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="connections.html">Connections</a></li>
+                            <li><a href="groups.html">Groups</a></li>
+                            <li><a href="events.html">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:support@campusconnect.com">support@campusconnect.com</a></li>
+                            <li><a href="tel:+911234567890">+91 123 456 7890</a></li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CampusConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html> 

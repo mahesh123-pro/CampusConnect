@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connections - CampusConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/connections.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <a href="home.html" class="logo" aria-label="CampusConnect Home">CampusConnect</a>
+        <form class="search-container" role="search">
+          <div class="search-input-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for people, posts, skills..." class="search-input" aria-label="Search site content" />
+          </div>
+        </form>
+      </div>
+
+      <nav class="nav-center" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+          <li class="active"><a href="connections.html"><i class="fas fa-user-friends"></i><span>Connections</span></a></li>
+          <li><a href="groups.html"><i class="fas fa-users"></i><span>Groups</span></a></li>
+          <li><a href="events.html"><i class="fas fa-calendar-alt"></i><span>Events</span></a></li>
+          <li><a href="messages.html"><i class="fas fa-comment"></i><span>Messages</span><span class="badge" aria-label="3 new messages">3</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <button class="icon-btn notification-btn" aria-label="Notifications">
+          <i class="fas fa-bell"></i><span class="badge" aria-label="2 new notifications">2</span>
+        </button>
+
+        <div class="nav-profile dropdown-wrapper">
+          <button class="profile-btn" aria-label="Open profile menu">
+            <img src="images/profile.jpg" alt="Your profile photo" class="profile-img" />
+            <span class="profile-name">Rohit</span><i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown profile-dropdown">
+            <ul>
+              <li><a href="profile.html"><i class="fas fa-user"></i> View Profile</a></li>
+              <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+              <li><a href="help.html"><i class="fas fa-question-circle"></i> Help Center</a></li>
+              <li class="divider"></li>
+              <li><a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content" role="main">
+    <section class="connections-section container">
+      <header class="connections-header">
+        <h1>Connections</h1>
+        <div class="connections-actions">
+          <div class="connections-search">
+            <i class="fas fa-search"></i>
+            <input type="search" placeholder="Search connections" id="connection-search" aria-label="Search connections" />
+          </div>
+          <button class="btn btn-primary" aria-label="Add new connection"><i class="fas fa-user-plus"></i> Add Connections</button>
+        </div>
+      </header>
+
+      <!-- Tabs -->
+      <nav class="connections-tabs" aria-label="Connection Categories">
+        <button class="tab-btn active" data-tab="all">All Connections <span class="count">127</span></button>
+        <button class="tab-btn" data-tab="pending">Pending <span class="count">5</span></button>
+        <button class="tab-btn" data-tab="suggestions">Suggestions <span class="count">20+</span></button>
+      </nav>
+
+      <!-- Filters -->
+      <div class="connections-filters">
+        <div class="filter-group">
+          <label for="branch-filter">Branch:</label>
+          <select id="branch-filter" class="filter-select" aria-label="Filter by branch">
+            <option value="all">All Branches</option>
+            <option value="cse">Computer Science</option>
+            <option value="ece">Electronics & Communication</option>
+            <option value="eee">Electrical Engineering</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="civil">Civil Engineering</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="year-filter">Year:</label>
+          <select id="year-filter" class="filter-select" aria-label="Filter by year">
+            <option value="all">All Years</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+            <option value="alumni">Alumni</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="skill-filter">Skills:</label>
+          <select id="skill-filter" class="filter-select" aria-label="Filter by skill">
+            <option value="all">All Skills</option>
+            <option value="programming">Programming</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+            <option value="research">Research</option>
+          </select>
+        </div>
+        <button class="btn btn-outline btn-sm filter-reset" aria-label="Reset filters"><i class="fas fa-redo-alt"></i> Reset</button>
+      </div>
+
+      <!-- View & Sort -->
+      <div class="connections-view-options">
+        <span>View:</span>
+        <button class="view-btn active" data-view="grid"><i class="fas fa-th-large"></i> Grid</button>
+        <button class="view-btn" data-view="list"><i class="fas fa-list"></i> List</button>
+        <div class="sort-options">
+          <label for="sort-by">Sort by:</label>
+          <select id="sort-by" class="sort-select" aria-label="Sort connections">
+            <option value="recent">Recently Connected</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="branch">Branch</option>
+            <option value="year">Year</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Connections List -->
+      <section class="connections-container grid-view" aria-label="List of connections">
+        <!-- Loop each card -->
+        <!-- Example: -->
+        <article class="connection-card" data-branch="cse" data-year="4" aria-label="Connection card for Priya Sharma">
+          <header class="connection-header">
+            <img src="images/avatar-1.jpg" alt="Priya Sharma profile picture" class="connection-img" />
+            <button class="connection-menu" aria-label="Connection options"><i class="fas fa-ellipsis-h"></i></button>
+          </header>
+          <div class="connection-body">
+            <h3 class="connection-name">Priya Sharma</h3>
+            <p class="connection-headline">Computer Science Student | Machine Learning Enthusiast</p>
+            <p class="connection-details"><i class="fas fa-graduation-cap"></i> Computer Science, 4th Year</p>
+            <div class="connection-skills">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Machine Learning</span>
+              <span class="skill-badge">Data Science</span>
+            </div>
+          </div>
+          <footer class="connection-footer">
+            <button class="btn btn-outline btn-block"><i class="fas fa-comment"></i> Message</button>
+            <button class="btn btn-link"><i class="fas fa-user-check"></i> Connected</button>
+          </footer>
+        </article>
+        <!-- More Cards -->
+      </section>
+    </section>
+  </main>
+
+  <!-- Optional: JavaScript for Dropdowns, Tabs, Filters -->
+  <script src="js/connections.js"></script>
+</body>
+</html>

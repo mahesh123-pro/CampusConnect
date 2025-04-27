@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect | Student Networking Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="light-mode">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="toggle" class="toggle-input">
+        <label for="toggle" class="toggle-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <span class="toggle-ball"></span>
+        </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo" data-tilt>
+                <span class="logo-text">Campus</span>
+                <span class="logo-highlight">Connect</span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="signup.html" class="btn-primary">Join Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-word title-word-1">Connect.</span>
+                    <span class="title-word title-word-2">Collaborate.</span>
+                    <span class="title-word title-word-3">Grow.</span>
+                </h1>
+                <p class="hero-subtitle">The future of student networking is here. Join your campus community today.</p>
+                <div class="hero-buttons">
+                    <a href="signup.html" class="btn-primary btn-3d">Get Started</a>
+                    <a href="#" class="btn-secondary btn-3d">Explore</a>
+                </div>
+            </div>
+            <div class="hero-visual" data-tilt>
+                <div class="floating-cards">
+                    <div class="card card-1" data-tilt></div>
+                    <div class="card card-2" data-tilt></div>
+                    <div class="card card-3" data-tilt></div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Why CampusConnect?</h2>
+            <p>Designed exclusively for students by students</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Smart Connections</h3>
+                <p>Find students with similar interests and skills through our intelligent matching system.</p>
+                <div class="feature-wave"></div>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Project Collaboration</h3>
+                <p>Team up for hackathons, research, or study groups with ease.</p>
+                <div class="feature-wave"></div>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Skill Sharing</h3>
+                <p>Teach what you know and learn what you don't in our knowledge exchange.</p>
+                <div class="feature-wave"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="section-header">
+            <h2>Join our Campus Community</h2>
+            <p>Connect with students from your university</p>
+        </div>
+        <div class="community-grid">
+            <!-- Student cards will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>Welcome to CampusConnect</h2>
+                <button class="close-auth">&times;</button>
+            </div>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            <form class="auth-form login-form" id="login-form">
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="University Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <form class="auth-form register-form" id="register-form" style="display: none;">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="University Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Create Password" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Post Creator Modal -->
+    <div class="post-modal">
+        <div class="post-container">
+            <div class="post-header">
+                <h2>Create a Post</h2>
+                <button class="close-post">&times;</button>
+            </div>
+            <div class="post-creator">
+                <textarea placeholder="What's on your mind?"></textarea>
+                <div class="post-options">
+                    <button class="option-btn"><i class="fas fa-image"></i> Photo</button>
+                    <button class="option-btn"><i class="fas fa-tag"></i> Tag</button>
+                    <button class="option-btn"><i class="fas fa-graduation-cap"></i> Course</button>
+                </div>
+                <div class="post-preview"></div>
+                <button class="btn-primary post-submit">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span>Campus</span>
+                <span>Connect</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 CampusConnect. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
